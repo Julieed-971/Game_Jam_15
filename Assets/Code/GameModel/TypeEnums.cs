@@ -28,7 +28,7 @@ public enum ResourceType {
     Creature
 }
 
-public enum CraftBuildingType{
+public enum BuildingType{
     None,
     Portal, // TODO: Summoner ?
     Laboratory,

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5533221043513624566}
   - component: {fileID: 220585099397683938}
+  - component: {fileID: 4841726044210101027}
   - component: {fileID: 5410187317338266487}
   - component: {fileID: -1225177099585729905}
   - component: {fileID: -115816820875905056}
@@ -47,12 +48,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86102bf93a570e245a9bde14c55ab11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   world: 0
   recipes:
   - {fileID: 8019867512993008198, guid: 753969186d90c8a44a7c1ed99c64ade9, type: 3}
-  width: 0
-  height: 0
+  width: 2
+  height: 2
+--- !u!114 &4841726044210101027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520788725640741368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb0ce8ed1e96b94a995286215d3a386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &5410187317338266487
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -9,7 +9,9 @@ public class Recipe : MonoBehaviour {
     public Resource resource3In;
     public int resource3InAmount;
     public Resource resourceOut;
-
+    
+    public bool known = false;
+    
     public void Start() {
     }
     

@@ -10,12 +10,12 @@ public class PlayerManager: Singleton<PlayerManager> {
     public Sprite shadowBackgroundSprite;
     public Sprite lightBackgroundSprite;
     public TheWorld theWorld;
-    public CraftBuildingType buildingThisBuilding;
+    public BuildingType buildingThisBuilding;
 
     void Start(){
         currentWorld = World.Light;
         background.GetComponent<SpriteRenderer>().sprite = lightBackgroundSprite;
-        buildingThisBuilding = CraftBuildingType.None;
+        buildingThisBuilding = BuildingType.None;
         theWorld.SwitchWorld(currentWorld);
     }
     void Update(){
@@ -43,7 +43,7 @@ public class PlayerManager: Singleton<PlayerManager> {
         Debug.Log("Added resource " + type);
     }
 
-    public CraftBuildingType IsCurrentlyBuilding(){
+    public BuildingType IsCurrentlyBuilding(){
         return buildingThisBuilding;
     }
 }

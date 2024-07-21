@@ -1,11 +1,9 @@
-
 using UnityEngine;
 
-public class CraftBuilding : MonoBehaviour {
+public class BaseBuilding : MonoBehaviour {
 
     public BuildingType type;
     public World world;
-    public Recipe[] recipes;
     public int width;
     public int height;
     public void Start() {
