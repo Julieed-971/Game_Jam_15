@@ -29,6 +29,7 @@ public enum ResourceType {
 }
 
 public enum CraftBuildingType{
+    None,
     Portal, // TODO: Summoner ?
     Laboratory,
     Jeweler,

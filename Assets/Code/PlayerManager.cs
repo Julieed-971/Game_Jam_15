@@ -10,11 +10,18 @@ public class PlayerManager: Singleton<PlayerManager> {
     public Sprite shadowBackgroundSprite;
     public Sprite lightBackgroundSprite;
     public TheWorld theWorld;
+    public CraftBuildingType buildingThisBuilding;
 
-
+    void Start(){
+        currentWorld = World.Light;
+        background.GetComponent<SpriteRenderer>().sprite = lightBackgroundSprite;
+        buildingThisBuilding = CraftBuildingType.None;
+        theWorld.SwitchWorld(currentWorld);
+    }
     void Update(){
         SwitchWorld();
     }
+
 
     public void SwitchWorld(){
         // listen to space key to change world
@@ -28,6 +35,15 @@ public class PlayerManager: Singleton<PlayerManager> {
             }
             Debug.Log("Switched to " + currentWorld);
             theWorld.SwitchWorld(currentWorld);
+            FillCollect.instance.CancelFill();
         }
+    }
+
+    public void AddResource(ResourceType type){
+        Debug.Log("Added resource " + type);
+    }
+
+    public CraftBuildingType IsCurrentlyBuilding(){
+        return buildingThisBuilding;
     }
 }

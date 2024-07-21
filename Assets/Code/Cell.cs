@@ -35,11 +35,13 @@ public class Cell : MonoBehaviour {
     }
 
     void OnMouseOver() {
-        if (LBlocked && PlayerManager.instance.currentWorld == World.Light
-            || SBlocked && PlayerManager.instance.currentWorld == World.Shadow){
-            HighlightBlockedCell();
-        } else {
-            HighlightValidCell();
+        if (PlayerManager.instance.IsCurrentlyBuilding() != CraftBuildingType.None) {
+            if (LBlocked && PlayerManager.instance.currentWorld == World.Light
+                || SBlocked && PlayerManager.instance.currentWorld == World.Shadow){
+                HighlightBlockedCell();
+            } else {
+                HighlightValidCell();
+            }
         }
         Debug.Log("Mouse is over GameObject.");
     }
