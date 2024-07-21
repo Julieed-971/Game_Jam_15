@@ -1,9 +1,9 @@
 
 using UnityEngine;
 
-public class Building : MonoBehaviour {
+public class CraftBuilding : MonoBehaviour {
 
-    public BuildingType type;
+    public CraftBuildingType type;
     public World world;
     public Recipe[] recipes;
 
