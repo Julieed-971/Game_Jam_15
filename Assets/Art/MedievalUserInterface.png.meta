@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: 66f02fa3ab51925469c9b6b35aec7e0c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MedievalUserInterface_25
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 1822
+        width: 658
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dbfa8f9c17a3140b48dcd5f37605d0
+      internalID: -1490421982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MedievalUserInterface_28
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 1779
+        width: 658
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a3c3296e55b5c40be1307dcd26917e
+      internalID: 182825598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MedievalUserInterface_29
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1631
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffa3a6eb150cc349b62e37be5b8008a
+      internalID: -1927300893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MedievalUserInterface_34
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1629
+        width: 108
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8c5d2a63e11bb448872a911be4a660
+      internalID: 1880763744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MedievalUserInterface_0: -366647785
+      MedievalUserInterface_1: 921527831
+      MedievalUserInterface_10: -493501523
+      MedievalUserInterface_11: -841551684
+      MedievalUserInterface_12: -934876568
+      MedievalUserInterface_13: 2128674950
+      MedievalUserInterface_14: -1171158467
+      MedievalUserInterface_15: -1223423933
+      MedievalUserInterface_16: 2015696217
+      MedievalUserInterface_17: 1659820242
+      MedievalUserInterface_18: 1501338440
+      MedievalUserInterface_19: 709135693
+      MedievalUserInterface_2: -2002732206
+      MedievalUserInterface_20: 1951132653
+      MedievalUserInterface_21: 2135760085
+      MedievalUserInterface_22: -1780481616
+      MedievalUserInterface_23: -2107011106
+      MedievalUserInterface_24: -720228182
+      MedievalUserInterface_25: -1490421982
+      MedievalUserInterface_26: -1847570426
+      MedievalUserInterface_27: -283880457
+      MedievalUserInterface_28: 182825598
+      MedievalUserInterface_29: -1927300893
+      MedievalUserInterface_3: 405672118
+      MedievalUserInterface_30: 57755810
+      MedievalUserInterface_31: -559371434
+      MedievalUserInterface_32: -1952137773
+      MedievalUserInterface_33: -348454935
+      MedievalUserInterface_34: 1880763744
+      MedievalUserInterface_35: -1946076153
+      MedievalUserInterface_36: -111274622
+      MedievalUserInterface_37: 976849732
+      MedievalUserInterface_38: 226411900
+      MedievalUserInterface_39: -1726884329
+      MedievalUserInterface_4: 1035940433
+      MedievalUserInterface_40: -1282021811
+      MedievalUserInterface_41: 776262009
+      MedievalUserInterface_42: -1394736417
+      MedievalUserInterface_43: -2086890621
+      MedievalUserInterface_44: 268877556
+      MedievalUserInterface_45: 136834073
+      MedievalUserInterface_46: 2144792547
+      MedievalUserInterface_47: 1287025241
+      MedievalUserInterface_48: 91797799
+      MedievalUserInterface_49: -1125860771
+      MedievalUserInterface_5: 1009922239
+      MedievalUserInterface_50: 1501475809
+      MedievalUserInterface_51: 2072733737
+      MedievalUserInterface_52: 220385316
+      MedievalUserInterface_53: -1791086797
+      MedievalUserInterface_54: -1693797418
+      MedievalUserInterface_55: 2048360081
+      MedievalUserInterface_56: -1363808128
+      MedievalUserInterface_57: -908500330
+      MedievalUserInterface_58: 98962010
+      MedievalUserInterface_59: -262499927
+      MedievalUserInterface_6: 822351414
+      MedievalUserInterface_60: 758781535
+      MedievalUserInterface_61: -40530345
+      MedievalUserInterface_62: 1091000882
+      MedievalUserInterface_63: -1474914414
+      MedievalUserInterface_64: -457887725
+      MedievalUserInterface_65: 777739181
+      MedievalUserInterface_66: 815712331
+      MedievalUserInterface_67: -1212937223
+      MedievalUserInterface_68: -1908945329
+      MedievalUserInterface_69: 724754008
+      MedievalUserInterface_7: -982652719
+      MedievalUserInterface_70: -770406553
+      MedievalUserInterface_71: 1509021627
+      MedievalUserInterface_72: 886211679
+      MedievalUserInterface_73: 286917842
+      MedievalUserInterface_74: 1445352351
+      MedievalUserInterface_75: 2046355540
+      MedievalUserInterface_76: 1109113978
+      MedievalUserInterface_77: -695267325
+      MedievalUserInterface_78: 56289201
+      MedievalUserInterface_79: -1047196017
+      MedievalUserInterface_8: -1203437920
+      MedievalUserInterface_80: -727549397
+      MedievalUserInterface_81: 951560788
+      MedievalUserInterface_82: -1551019017
+      MedievalUserInterface_83: 1080154334
+      MedievalUserInterface_84: -1280673062
+      MedievalUserInterface_85: -1910608044
+      MedievalUserInterface_86: -1532298940
+      MedievalUserInterface_87: -970054271
+      MedievalUserInterface_88: 1224484361
+      MedievalUserInterface_9: -1906300740
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

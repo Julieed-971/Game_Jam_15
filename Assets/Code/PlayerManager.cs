@@ -9,6 +9,7 @@ public class PlayerManager: Singleton<PlayerManager> {
     public GameObject background;
     public Sprite shadowBackgroundSprite;
     public Sprite lightBackgroundSprite;
+    public TheWorld theWorld;
 
 
     void Update(){
@@ -26,6 +27,7 @@ public class PlayerManager: Singleton<PlayerManager> {
                 background.GetComponent<SpriteRenderer>().sprite = lightBackgroundSprite;
             }
             Debug.Log("Switched to " + currentWorld);
-        } 
+            theWorld.SwitchWorld(currentWorld);
+        }
     }
 }

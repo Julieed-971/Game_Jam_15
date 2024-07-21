@@ -22,7 +22,7 @@ public class GroundGridGenerator : MonoBehaviour {
                 GameObject tile = Instantiate(groundTilePrefab, new Vector3(x_value, ((float)y)/4, 0), Quaternion.identity);
                 tile.transform.SetParent(transform);
                 tile.GetComponent<Cell>().coordinates = new Vector2Int(x, y);
-                tile.GetComponent<Cell>().lightLevel = Random.Range(-5, 6);
+                // tile.GetComponent<Cell>().lightLevel = Random.Range(-5, 6);
                 tile.GetComponent<Cell>().UpdateColor();
             }
         }
