@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   world: 0
-  width: 2
+  width: 3
   height: 2
 --- !u!114 &4808999576067095404
 MonoBehaviour:

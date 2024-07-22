@@ -13,6 +13,8 @@ public class Cell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public bool LBlocked = false;
     public bool SBlocked = false;
     public SpriteRenderer spriteRenderer;
+    public GroundGridGenerator groundGrid;
+    bool colored = false;
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         UpdateColor();
@@ -20,6 +22,17 @@ public class Cell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     // Color the cell based on the light level
     public void UpdateColor(){
         spriteRenderer.color = lightColors[lightLevel+5];
+    }
+    public bool HighlightCell(){
+        colored = true;
+        if (LBlocked && PlayerManager.instance.currentWorld == World.Light
+            || SBlocked && PlayerManager.instance.currentWorld == World.Shadow){
+            HighlightBlockedCell();
+            return false;
+        } else {
+            HighlightValidCell();
+            return true;
+        }
     }
     public void HighlightBlockedCell(){
         spriteRenderer.color = Color.red;
@@ -35,27 +48,35 @@ public class Cell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         }
     }
 
-
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData) {
-        // if (PlayerManager.instance.IsCurrentlyBuilding() != CraftBuildingType.None) {
-            if (LBlocked && PlayerManager.instance.currentWorld == World.Light
-                || SBlocked && PlayerManager.instance.currentWorld == World.Shadow){
-                HighlightBlockedCell();
-            } else {
-                HighlightValidCell();
-            }
-        // }
-        Debug.Log("Mouse is over GameObject.");
+        AbstractBuilding currentBuilding = PlayerManager.instance.IsCurrentlyBuilding();
+
+        if (currentBuilding != null && currentBuilding.type != BuildingType.None) {
+            groundGrid.HighlightCells(coordinates, currentBuilding.width, currentBuilding.height);
+            // if (LBlocked && PlayerManager.instance.currentWorld == World.Light
+            //     || SBlocked && PlayerManager.instance.currentWorld == World.Shadow){
+            //     HighlightBlockedCell();
+            // } else {
+            //     HighlightValidCell();
+            // }
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData) {
-        UpdateColor();
-        Debug.Log("Mouse is no longer on GameObject.");
+        // Reset the color of the cell
+        groundGrid.ClearColors(coordinates);
+    }
+    public void ClearCell(){
+        if (colored){
+            colored = false;
+            UpdateColor();
+        }
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData) {
+        AbstractBuilding currentBuilding = PlayerManager.instance.IsCurrentlyBuilding();
         // Do nothing or handle cell click if necessary
-        if (PlayerManager.instance.IsCurrentlyBuilding() != BuildingType.None) {
+        if (currentBuilding != null && currentBuilding.type != BuildingType.None) {
             BuildOnIt(PlayerManager.instance.currentWorld);//TODO complete everything for building here
 
 
