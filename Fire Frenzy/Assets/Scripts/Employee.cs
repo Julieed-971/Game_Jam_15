@@ -1,58 +1,55 @@
 
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Employee : MonoBehaviour {
     /// <summary>
     /// Paie toutes les secondes, 1 seconde représente 1 semaine
-    /// </summary>
-    public RectTransform productivityBar;
-    public RectTransform skillBar;
-    public RectTransform moraleBar;
+    /// </summary>  
     public int productivityMax;
     public float productivity;
     public float pendingProductivity;
     public float productivityDecreaseRate;
+    public float moraleDecreaseRate;
     public float trainingDuration;
     public float holidaysDuration;
     float absentTimer = 0;
-    public Slider productivitySlider;
     public int skillMax;
     public int skill;
-    public Slider skillSlider;
     public int moraleMax;
     public float morale;
-    public Slider moraleSlider;
     public int salary;
     public int salaryClaim;
-    public Image employeeFace;
-    public TMPro.TextMeshProUGUI wageClaim;
-    public Sprite[] employeeFaces;
-    
+    public CandidateUI candidateUI;
+    public int faceId;
+    public EmployeeUI employeeUI;
     public void Start(){
-        GenerateStats(); // Stats du candidat
+        candidateUI = GetComponent<CandidateUI>();
+        if (candidateUI != null) {
+            GenerateStats(); // Stats du candidat
+        }
     }
 
     // Generate random value for max productivity, skill and morale
     void GenerateStats(){
-        employeeFace.sprite = employeeFaces[Random.Range(0, employeeFaces.Length)];
+        // employeeFace.sprite = employeeFaces[Random.Range(0, employeeFaces.Length)];
         productivityMax = Random.Range(5, 12);
+        productivityDecreaseRate = 0.1f/productivityMax;
         skillMax = Random.Range(4, 8);
-        skill = Random.Range(1, Random.Range(1, Random.Range(1, Random.Range(3, 4))));
+        skill = Random.Range(1, Random.Range(1, Random.Range(1, Random.Range(2, 4))));
         moraleMax = Random.Range(4, 12);
+        moraleDecreaseRate = 0.1f/moraleMax;
         salaryClaim = productivityMax * skillMax * moraleMax * skill;
         salaryClaim = (int)((float)salaryClaim * Random.Range(0.8f, 1.2f));
         productivity = 1;
         morale = 1;
-        SetEmployeeUI();
+        faceId = Random.Range(0, Company.instance.employeeFaces.Length);
+        // update moi la gueule
+        candidateUI.UpdateUI(this);
     }
 
     // Copy constructor
-    public Employee(Employee other) {
-        this.productivityBar = other.productivityBar;
-        this.skillBar = other.skillBar;
-        this.moraleBar = other.moraleBar;
+    public void CopyEmployee(Employee other) {
         this.productivityMax = other.productivityMax;
         this.productivity = other.productivity;
         this.pendingProductivity = other.pendingProductivity;
@@ -60,44 +57,28 @@ public class Employee : MonoBehaviour {
         this.trainingDuration = other.trainingDuration;
         this.holidaysDuration = other.holidaysDuration;
         this.absentTimer = other.absentTimer;
-        this.productivitySlider = other.productivitySlider;
         this.skillMax = other.skillMax;
         this.skill = other.skill;
-        this.skillSlider = other.skillSlider;
         this.moraleMax = other.moraleMax;
         this.morale = other.morale;
-        this.moraleSlider = other.moraleSlider;
+        this.moraleDecreaseRate = other.moraleDecreaseRate;
         this.salary = other.salary;
         this.salaryClaim = other.salaryClaim;
-        this.employeeFace = other.employeeFace;
-        this.employeeFaces = other.employeeFaces;
-    }
-
-    public void SetEmployeeUI(){
-        SetBarSize(productivityBar, productivityMax);
-        SetBarSize(skillBar, skillMax);
-        SetBarSize(moraleBar, moraleMax);
-
-        // productivitySlider.maxValue = productivityMax;
-        skillSlider.maxValue = skillMax;
-        // moraleSlider.maxValue = moraleMax;
-
-        productivitySlider.value = productivity;
-        skillSlider.value = skill;
-        moraleSlider.value = morale;
-        
-        wageClaim.text = "" + salaryClaim;
-    }
-    
-    void SetBarSize(RectTransform bar, int maxValue) {
-        bar.sizeDelta = new Vector2(bar.sizeDelta.x, maxValue*10);
+        this.faceId = other.faceId;
     }
 
     public void Hire(){
-        Company.instance.HireEmployee(this);        
+        // TODO fill reference to employeeUI
+        Company.instance.HireEmployee(this);
+        CandidateGenerator.instance.candidates.Remove(this);
+        Destroy(gameObject);
+    }
+    
+    public void FinishHire(){
         productivity = 1;
         morale = 1;
         salary = salaryClaim;
+        employeeUI.Create(this);
     }
 
     public void Raise(){
@@ -121,7 +102,6 @@ public class Employee : MonoBehaviour {
         pendingProductivity = productivity;
         productivity = 0;
         absentTimer = holidaysDuration;
-
     }
 
     void FixedUpdate() {
@@ -134,6 +114,11 @@ public class Employee : MonoBehaviour {
             if (absentTimer < 0){
                 productivity = pendingProductivity;
             }
+        } else {
+            morale -= Time.fixedDeltaTime*moraleDecreaseRate;
+        }
+        if (employeeUI != null){
+            employeeUI.UpdateUI(this);
         }
     }
 

@@ -342,9 +342,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.3, y: -30.755684}
+  m_AnchoredPosition: {x: 91.1, y: -113.48}
   m_SizeDelta: {x: 24.204, y: 165.4554}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &5192222617393330102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +529,8 @@ GameObject:
   - component: {fileID: 8091886522050710174}
   - component: {fileID: 5985489829795752886}
   - component: {fileID: 3950347178324906474}
+  - component: {fileID: 7358611879654488853}
+  - component: {fileID: 8226898167280346691}
   m_Layer: 5
   m_Name: EmployeePanel
   m_TagString: Untagged
@@ -564,7 +566,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8091886522050710174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -623,6 +625,54 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7358611879654488853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041009636700252212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf18c4d56bff6940b5d60d41d174fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productivityBar: {fileID: 6350350150598364955}
+  skillBar: {fileID: 8976810219441365898}
+  moraleBar: {fileID: 4488016558501691061}
+  productivitySlider: {fileID: 4632375349796396382}
+  skillSlider: {fileID: 2411404476400554491}
+  moraleSlider: {fileID: 5192222617393330102}
+  employeeFace: {fileID: 2798417485184484009}
+  salary: {fileID: 2730668739212249250}
+--- !u!114 &8226898167280346691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041009636700252212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e51a468cd2a5a84090d35f4874ae804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productivityMax: 0
+  productivity: 0
+  pendingProductivity: 0
+  productivityDecreaseRate: 0
+  moraleDecreaseRate: 0
+  trainingDuration: 0
+  holidaysDuration: 0
+  skillMax: 0
+  skill: 0
+  moraleMax: 0
+  morale: 0
+  salary: 0
+  salaryClaim: 0
+  candidateUI: {fileID: 0}
+  faceId: 0
+  employeeUI: {fileID: 0}
 --- !u!1 &2088969648477980466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,9 +1231,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.4, y: -67.7146}
-  m_SizeDelta: {x: 24.204, y: 91.5374}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 54.1, y: -113.48}
+  m_SizeDelta: {x: 24.204, y: 111.185}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2411404476400554491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1793,9 +1843,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.702, y: -46.2863}
+  m_AnchoredPosition: {x: 15.702, y: -113.48335}
   m_SizeDelta: {x: 24.204, y: 134.3941}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &4632375349796396382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,7 +1930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.18560028}
+  m_AnchoredPosition: {x: 0, y: -0.18559647}
   m_SizeDelta: {x: -1.8526, y: -11.5044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6434656294053818894

@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 7809705450412879314}
   - component: {fileID: 2085676638324599144}
   - component: {fileID: 2875267551847154308}
+  - component: {fileID: 6058000926516326065}
   m_Layer: 5
   m_Name: CandidatePanel
   m_TagString: Untagged
@@ -1067,58 +1068,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e51a468cd2a5a84090d35f4874ae804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productivityBar: {fileID: 5413708627183466801}
-  skillBar: {fileID: 9048934881872760603}
-  moraleBar: {fileID: 4718846720219673897}
   productivityMax: 0
   productivity: 0
   pendingProductivity: 0
   productivityDecreaseRate: 0
   trainingDuration: 0
   holidaysDuration: 0
-  productivitySlider: {fileID: 3842877981398543931}
   skillMax: 0
   skill: 0
-  skillSlider: {fileID: 4519501890613006183}
   moraleMax: 0
   morale: 0
-  moraleSlider: {fileID: 8854549587724674306}
   salary: 0
   salaryClaim: 0
+  candidateUI: {fileID: 0}
+--- !u!114 &6058000926516326065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235653590053140796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2e857047c8daf4688e8a1ecdf5f008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productivityBar: {fileID: 5413708627183466801}
+  skillBar: {fileID: 9048934881872760603}
+  moraleBar: {fileID: 4718846720219673897}
+  productivitySlider: {fileID: 3842877981398543931}
+  skillSlider: {fileID: 4519501890613006183}
+  moraleSlider: {fileID: 8854549587724674306}
   employeeFace: {fileID: 3697594388871700831}
   wageClaim: {fileID: 2602085093794096225}
-  employeeFaces:
-  - {fileID: 1220548165, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 103097360, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1741181420, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -543607691, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 2069620385, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1538188694, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1825775631, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -48653863, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 176282065, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 431369314, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1425353065, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1897895919, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1693545000, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -848816593, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1309127554, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1580309336, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1620895390, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -509356465, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1811148506, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1052973397, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1965980785, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -62012834, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -718308303, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1885635824, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 126196885, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1826483911, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1366049908, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -1806377516, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: -2055074675, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 1133527651, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
-  - {fileID: 365341215, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
 --- !u!1 &5558510960523900809
 GameObject:
   m_ObjectHideFlags: 0

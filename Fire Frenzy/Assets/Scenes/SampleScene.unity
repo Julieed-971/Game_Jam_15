@@ -1847,6 +1847,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c09432ad66d8945bd415b24ae178e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  employeeFaces:
+  - {fileID: 1220548165, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 103097360, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1741181420, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -543607691, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 2069620385, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1538188694, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1825775631, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -48653863, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 176282065, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 431369314, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1425353065, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1897895919, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1693545000, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -848816593, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1309127554, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1580309336, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1620895390, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -509356465, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1811148506, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1052973397, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1965980785, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -62012834, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -718308303, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1885635824, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 126196885, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1826483911, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1366049908, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -1806377516, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: -2055074675, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 1133527651, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
+  - {fileID: 365341215, guid: 692ee31b54094c74eacfa7c8f7c26ef7, type: 3}
   employeePrefab: {fileID: 2041009636700252212, guid: f58bb43625995ef479cce0e007cdcb9a, type: 3}
   contentPanels:
   - {fileID: 1346851994}
