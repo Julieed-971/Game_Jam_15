@@ -9,8 +9,8 @@ public class Employee : MonoBehaviour {
     public int productivityMax;
     public float productivity;
     public float pendingProductivity;
-    public float productivityDecreaseRate;
-    public float moraleDecreaseRate;
+    float productivityDecreaseRate;
+    float moraleDecreaseRate;
     public float trainingDuration;
     public float holidaysDuration;
     float absentTimer = 0;
@@ -22,8 +22,12 @@ public class Employee : MonoBehaviour {
     public int salaryClaim;
     public CandidateUI candidateUI;
     public int faceId;
+    bool resigned;
     public EmployeeUI employeeUI;
+    
     public void Start(){
+        resigned = false;
+        absentTimer = 0;
         candidateUI = GetComponent<CandidateUI>();
         if (candidateUI != null) {
             GenerateStats(); // Stats du candidat
@@ -50,6 +54,7 @@ public class Employee : MonoBehaviour {
 
     // Copy constructor
     public void CopyEmployee(Employee other) {
+        this.resigned = false;
         this.productivityMax = other.productivityMax;
         this.productivity = other.productivity;
         this.pendingProductivity = other.pendingProductivity;
@@ -68,10 +73,10 @@ public class Employee : MonoBehaviour {
     }
 
     public void Hire(){
-        // TODO fill reference to employeeUI
-        Company.instance.HireEmployee(this);
-        CandidateGenerator.instance.candidates.Remove(this);
-        Destroy(gameObject);
+        if (Company.instance.HireEmployee(this)){
+            CandidateGenerator.instance.candidates.Remove(this);
+            Destroy(gameObject);
+        }
     }
     
     public void FinishHire(){
@@ -82,7 +87,7 @@ public class Employee : MonoBehaviour {
     }
 
     public void Raise(){
-        salary = salary + salary * 10 / 100;
+        salary = salary + (int) ((float) salary * 10f * Random.Range(0.5f, 1.5f) / 100);
         productivity = 1;
     }
 
@@ -94,9 +99,13 @@ public class Employee : MonoBehaviour {
     }
 
     public float Rentability(){
+        if (resigned) return 0;
         return productivity * skill;
     } 
-
+    public float EmployeeValue(){
+        if (resigned) return 0;
+        return productivityMax * skillMax * moraleMax;
+    }
     public void Holidays(){
         morale = 1;
         pendingProductivity = productivity;
@@ -105,21 +114,31 @@ public class Employee : MonoBehaviour {
     }
 
     void FixedUpdate() {
-
-        productivity -= Time.fixedDeltaTime*productivityDecreaseRate;
-        pendingProductivity -= Time.fixedDeltaTime*productivityDecreaseRate;
-
-        if (absentTimer >0){
+        if (resigned) return;
+        if (absentTimer > 0){
+            pendingProductivity -= Time.fixedDeltaTime*productivityDecreaseRate;
+            Debug.Log("Absent " + absentTimer);
             absentTimer -= Time.fixedDeltaTime;
             if (absentTimer < 0){
                 productivity = pendingProductivity;
             }
         } else {
             morale -= Time.fixedDeltaTime*moraleDecreaseRate;
+            productivity -= Time.fixedDeltaTime*productivityDecreaseRate;
+            if (morale <= 0){
+                Resign();
+            }
         }
         if (employeeUI != null){
             employeeUI.UpdateUI(this);
         }
+    }
+
+    void Resign(){
+        employeeUI.ShowResign();
+        resigned = true;
+        productivity = 0;
+        salary = 0;
     }
 
     public void Fire(){

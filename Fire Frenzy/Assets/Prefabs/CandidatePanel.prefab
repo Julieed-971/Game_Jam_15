@@ -1072,8 +1072,9 @@ MonoBehaviour:
   productivity: 0
   pendingProductivity: 0
   productivityDecreaseRate: 0
-  trainingDuration: 0
-  holidaysDuration: 0
+  moraleDecreaseRate: 0
+  trainingDuration: 8
+  holidaysDuration: 5
   skillMax: 0
   skill: 0
   moraleMax: 0
@@ -1081,6 +1082,8 @@ MonoBehaviour:
   salary: 0
   salaryClaim: 0
   candidateUI: {fileID: 0}
+  faceId: 0
+  employeeUI: {fileID: 0}
 --- !u!114 &6058000926516326065
 MonoBehaviour:
   m_ObjectHideFlags: 0
